@@ -70,18 +70,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function testaElemento(n) {
+  if (n % 15 === 0) {
+    return 'fizzBuzz';
+  }
+  if (n % 5 === 0) {
+    return 'buzz';
+  }
+  if (n % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
   let newArray = [];
   for (let elemento of array) {
-    if (elemento % 15 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (elemento % 5 === 0) {
-      newArray.push('buzz');
-    } else if (elemento % 3 === 0) {
-      newArray.push('fizz');
-    } else {
-      newArray.push('bug!');
-    }
+    newArray.push(testaElemento(elemento));
   }
   return newArray;
 }
@@ -111,8 +116,8 @@ function techList(array, string) {
   }
   let lista = [];
   let arrayOrdenado = array.sort();
-  for (let elemento of arrayOrdenado) {
-    let obj = { tech: elemento, name: string };
+  for (let n of arrayOrdenado) {
+    let obj = { tech: n, name: string };
     lista.push(obj);
   }
   return lista;
