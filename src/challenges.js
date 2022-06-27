@@ -13,10 +13,11 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let array = frase.split(' ');
+  return array;
 }
-
+console.log(splitSentence('michel melo'))
 // Desafio 4
 function concatName() {
   // seu código aqui
