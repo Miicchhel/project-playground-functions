@@ -105,8 +105,17 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  let lista = [];
+  let arrayOrdenado = array.sort();
+  for (let elemento of arrayOrdenado) {
+    let obj = { tech: elemento, name: string };
+    lista.push(obj);
+  }
+  return lista;
 }
 
 module.exports = {
