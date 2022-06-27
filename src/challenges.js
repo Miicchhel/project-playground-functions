@@ -17,10 +17,12 @@ function splitSentence(frase) {
   let array = frase.split(' ');
   return array;
 }
-console.log(splitSentence('michel melo'))
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstPosArray = array[0];
+  let lastPosArray = array[array.length - 1];
+  return `${lastPosArray}, ${firstPosArray}`;
 }
 
 // Desafio 5
