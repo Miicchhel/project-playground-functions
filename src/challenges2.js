@@ -61,8 +61,32 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function validaLadosSoma(lineA, lineB, lineC) {
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineB + lineA)) {
+    return true;
+  }
+  return false;
+}
+
+function validaLadosModulo(lineA, lineB, lineC) {
+  if (lineA < Math.abs(lineB - lineC)) {
+    return true;
+  }
+  if (lineB < Math.abs(lineA - lineC)) {
+    return true;
+  }
+  if (lineC < Math.abs(lineB - lineA)) {
+    return true;
+  }
+  return false;
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let valSoma = validaLadosSoma(lineA, lineB, lineC);
+  let valModulo = validaLadosModulo(lineA, lineB, lineC);
+  if (valSoma || valModulo) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
