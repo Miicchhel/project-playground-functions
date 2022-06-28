@@ -15,16 +15,24 @@ function validaIntervalo(array) {
   return false;
 }
 
+function contaNum(array, i) {
+  let cont = 0;
+  for (let j = i; j < array.length; j += 1) {
+    if (array[i] === array[j]) {
+      cont += 1;
+    }
+    if (cont === 3) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function validaRepeticao(array) {
   for (let i = 0; i < array.length; i += 1) {
-    let cont = 0;
-    for (let j = i; j < array.length; j += 1) {
-      if (array[i] === array[j]) {
-        cont += 1;
-      }
-      if (cont === 3) {
-        return true;
-      }
+    let erro = contaNum(array, i);
+    if (erro) {
+      return true;
     }
   }
   return false;
